@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>พิมพ์เขียวและสถาปัตยกรรมฟีเจอร์แอปพลิเคชันบริการแอร์ครบวงจร</title>
+    <style>
+        :root {
+            --primary: #0284c7;
+            --primary-dark: #0369a1;
+            --accent: #06b6d4;
+            --bg-slate: #f8fafc;
+            --surface: #ffffff;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --shark-blue: #0284c7;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Sukhumvit Set', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-slate);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 24px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--accent));
+            color: white;
+            padding: 32px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin: 28px 0 16px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 8px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+        }
+
+        ul.feature-list {
+            list-style: none;
+        }
+
+        ul.feature-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        ul.feature-list li::before {
+            content: "•";
+            color: var(--accent);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 8px;
+            top: -4px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-right: 6px;
+        }
+
+        .tag-core { background: #e0f2fe; color: #0369a1; }
+        .tag-iot { background: #dcfce7; color: #15803d; }
+        .tag-gamify { background: #fef3c7; color: #b45309; }
+        .tag-ar { background: #f3e8ff; color: #6b21a8; }
+
+        .status-badge-container {
+            display: flex;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .status-badge {
+            flex: 1;
+            padding: 12px;
+            border-radius: 8px;
+            color: white;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+
+        .bg-iot-active { background: var(--success); }
+        .bg-iot-normal { background: var(--warning); }
+
+        .flow-box {
+            background: #f1f5f9;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+            font-size: 0.9rem;
+            margin-top: 8px;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 20px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>พิมพ์เขียวสถาปัตยกรรมฟีเจอร์แอปพลิเคชันบริการแอร์</h1>
+        <p>ยกระดับวงการบริการแอร์บ้านด้วย IoT Diagnostic System และ AR Spatial Design</p>
+    </header>
+
+    <!-- Section 1: Core System & Comparison -->
+    <div class="section-title">1. ระบบเปรียบเทียบและการคำนวณขนาดห้อง (Core Order & Calculation)</div>
+    <div class="grid-2">
+        <div class="card">
+            <div class="card-title"><span class="tag tag-core">ฟีเจอร์หลัก</span> ระบบเปรียบเทียบรุ่นแอร์ (Side-by-Side)</div>
+            <ul class="feature-list">
+                <li><strong>เปรียบเทียบ 2 แบบ/แบรนด์:</strong> แสดงตารางเปรียบเทียบราคา ค่า SEER (ความประหยัดไฟ) ประสิทธิภาพการกรอง PM 2.5 ระดับเสียง และเงื่อนไขประกัน</li>
+                <li><strong>คำนวณจุดคุ้มทุน (ROI Calculator):</strong> แสดงตัวเลขประมาณการประหยัดค่าไฟฟ้าต่อปีเมื่อเทียบกับรุ่นปกติ ให้เห็นว่ารุ่นประหยัดไฟคืนทุนได้กี่ปี</li>
+                <li><strong>บริการจบในแอป:</strong> เลือกซื้อสินค้า พ่วงบริการติดตั้ง ซ่อม หรือล้างแอร์ในออเดอร์เดียว</li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="card-title"><span class="tag tag-core">คำนวณ BTU</span> Smart BTU Calculator</div>
+            <ul class="feature-list">
+                <li><strong>พารามิเตอร์การประเมิน:</strong> ขนาดห้อง (กว้างxยาวxสูง) ทิศทางแดด จำนวนหน้าต่าง ช่องรับแสง ชนิดผนัง และจำนวนคน/เครื่องใช้ไฟฟ้าในห้อง</li>
+                <li><strong>อัลกอริทึมคำนวณภาระความร้อน (Cooling Load):</strong> ประมวลผล BTU ที่เหมาะสม ป้องกันการเลือกแอร์ขนาดเล็กไปจนทำงานหนัก หรือใหญ่ไปจนเปลืองพลังงาน</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Section 2: IoT Error Diagnostic -->
+    <div class="section-title">2. ระบบวินิจฉัยและแจ้งเตือน Error Code ผ่าน IoT (Arduino Integration)</div>
+    <div class="grid-2">
+        <div class="card">
+            <div class="card-title"><span class="tag tag-iot">IoT Feature</span> ตรวจจับและส่งข้อมูลสภาวะแอร์ด้วย Arduino</div>
+            <ul class="feature-list">
+                <li><strong>Arduino Sensor Module:</strong> ติดตั้งบอร์ดอ่านค่าสถานะ (เช่น อุณหภูมิคอยล์เย็น, ความดันน้ำยา, กระแสไฟฟ้า) ส่งข้อมูลขึ้น Cloud เมื่อเกิดข้อผิดพลาด</li>
+                <li><strong>Direct Error Code dispatch:</strong> ส่ง Error Code ตรงเข้าแอปพลิเคชัน ช่างทราบสาเหตุล่วงหน้า วินิจฉัยและเบิกอะไหล่มาเปลี่ยนได้ทันที ไม่ต้องเข้าเช็คหลายรอบ</li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="card-title"><span class="tag tag-iot">UX UI</span> ระบบแยกประเภทเครื่องติดอุปกรณ์ IoT (Color Coding)</div>
+            <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:12px;">ในหน้ารายการแอร์ของผู้ใช้/ช่าง จะมีการแยกสถานะชัดเจนด้วยสี:</p>
+            <div class="status-badge-container">
+                <div class="status-badge bg-iot-active">
+                    <strong>สีเขียว / ฟ้า (IoT Verified)</strong><br>
+                    ส่ง Error Code อัตโนมัติ ซ่อมได้ทันที
+                </div>
+                <div class="status-badge bg-iot-normal">
+                    <strong>สีเทา / ส้ม (Manual Check)</strong><br>
+                    ไม่มีโมดูล IoT ต้องให้ช่างเข้าตรวจเช็คตามปกติ
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 3: Technician Management -->
+    <div class="section-title">3. ระบบบริหารจัดการช่างและการติดตาม (Technician & Review System)</div>
+    <div class="grid-2">
+        <div class="card">
+            <div class="card-title"><span class="tag tag-core">การจองคิว</span> ตรวจสอบทีมช่างและแจ้งเตือนวันนัด</div>
+            <ul class="feature-list">
+                <li><strong>รายละเอียดทีมงาน:</strong> แสดงโครงสร้างทีมที่เข้าปฏิบัติงาน ชี้ชัดว่าใครเป็น **หัวหน้าทีม (Team Lead)** และใครเป็นช่างผู้ช่วย</li>
+                <li><strong>การแจ้งเตือนเรียลไทม์:</strong> แจ้งเตือนล่วงหน้า และแจ้งเตือนสถานะ "วันนี้ เวลา... ช่างกำลังเดินทางไปหาคุณ" พร้อมแผนที่ติดตาม</li>
+                <li><strong>ระบบฟีดรีวิวช่าง (Technician Feed):</strong> แสดงคลิปวิดีโอผลงาน ประวัติความเชี่ยวชาญ และคะแนนดาวของช่างแต่ละคน</li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="card-title"><span class="tag tag-core">ประเมินผล</span> ระบบให้ดาวและการประเมิน KPI ช่าง</div>
+            <ul class="feature-list">
+                <li><strong>Individual Rating:</strong> ลูกค้าให้คะแนนและรีวิวช่างแต่ละคนในทีมแยกกันได้อย่างอิสระ</li>
+                <li><strong>KPI Evaluation Integration:</strong> นำคะแนนรีวิวไปประมวลผลเป็นโบนัสและระดับ Tier ช่าง เพิ่มมาตรฐานการบริการและความน่าเชื่อถือ</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Section 4: Content, AR & Gamification (ไอเดียฟีเจอร์เพิ่มเติม) -->
+    <div class="section-title">4. ไอเดียฟีเจอร์เพิ่มเติม (AR, Content & Gamification)</div>
+    <div class="grid-2">
+        <div class="card">
+            <div class="card-title"><span class="tag tag-ar">AR Camera</span> AR Spatial Measurement & Placement</div>
+            <ul class="feature-list">
+                <li><strong>สแกนพื้นที่ด้วยกล้อง:</strong> สแกนผนังห้องเพื่อประมาณขนาดตำแหน่งติดตั้งแอร์ จำลองภาพ 3D ของแอร์แต่ละรุ่นบนผนังจริงเพื่อดูความสวยงามและระยะเว้นจากฝ้าเพดาน</li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="card-title"><span class="tag tag-gamified">Gamification</span> มาสคอต "น้องฉลาม" & Loyalty Points</div>
+            <ul class="feature-list">
+                <li><strong>Shark Care Mascot:</strong> น้องฉลาม คอยคอยแจ้งเตือนรอบการล้างแอร์/ซ่อมบำรุงตามระยะเวลาใช้งานจริง</li>
+                <li><strong>สะสมแต้ม Shark Points:</strong> ได้รับแต้มเมื่อจองบริการหรือเขียนรีวิว นำไปแลกส่วนลดค่าน้ำยาแอร์ หรือคูปองล้างแอร์ฟรี</li>
+            </ul>
+        </div>
+        <div class="card" style="grid-column: 1 / -1;">
+            <div class="card-title"><span class="tag tag-core">ศูนย์ความรู้</span> Video Content & Energy Care Hub</div>
+            <div class="grid-2">
+                <ul class="feature-list">
+                    <li><strong>วิดีโอแนะนำการดูแล:</strong> ควรล้างแอร์กี่ครั้งต่อปี การล้างฟิลเตอร์เบื้องด้วยตนเอง</li>
+                    <li><strong>พฤติกรรมควรหลีกเลี่ยง:</strong> สิ่งที่ไม่ควรทำเพื่อไม่ให้คอยล์เย็นชำรุด หรือเกิดน้ำหยด</li>
+                </ul>
+                <ul class="feature-list">
+                    <li><strong>Energy Saving Tips:</strong> วิเคราะห์สาเหตุแอร์กินไฟ เช่น การปรับอุณหภูมิที่เหมาะสม การใช้พัดลมช่วยกระจายลม</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>เอกสารพิมพ์เขียวระบบแอปพลิเคชันบริการแอร์ครบวงจร | ออกแบบโครงสร้างระบบเพื่อรองรับการพัฒนานวัตกรรม IoT และ AR</p>
+    </footer>
+</div>
+
+</body>
+</html>
